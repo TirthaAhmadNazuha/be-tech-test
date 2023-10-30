@@ -47,7 +47,7 @@ class UserHandlerRoute {
       await collection.createIndex({ username: 1 }, { unique: true });
       const { insertedId } = await collection.insertOne({ name, username, phone, password: await hash(password, 10) });
 
-      res.send({ message: 'Register Success', userId: insertedId, authToken: MakeAndStoreToken() });
+      res.send({ message: 'Register Success', user: { userId: insertedId, name, username, phone }, authToken: MakeAndStoreToken() });
     } catch (error) {
       console.error(error);
       if (error.code === 11000) return res.code(400).send({

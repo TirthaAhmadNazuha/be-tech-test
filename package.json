@@ -1,0 +1,25 @@
+{
+  "name": "be-tech-task_tirtha-ahmad-nazuha",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/cors": "^8.4.1",
+    "axios": "^1.6.0",
+    "bcrypt": "^5.1.1",
+    "fastify": "^4.24.3",
+    "mongodb": "^6.2.0",
+    "nanoid": "^5.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "4289e015-ca24-437b-bc3f-c7343d174ab1",
+		"name": "BE Tech Task_Tirtha Ahmad Nazuha",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Validated Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Tirtha Ahmad Nazuha\",\r\n    \"username\": \"me.tirtha\",\r\n    \"phone\": \"085778769535\",\r\n    \"password\": \"adeveloperthis\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://[::1]:5178/signup",
+					"protocol": "http",
+					"host": [
+						"[::1]"
+					],
+					"port": "5178",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unvalidated Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Tirtha Ahmad Nazuha\",\r\n    \"username\": \"me.t irtha \",\r\n    \"phone\": \"d085778769535\",\r\n    \"password\": \"adeveloperthis\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://[::1]:5178/signup",
+					"protocol": "http",
+					"host": [
+						"[::1]"
+					],
+					"port": "5178",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Success Signin User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"me.tirtha\",\r\n    \"password\": \"adeveloperthis\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://[::1]:5178/signin",
+					"protocol": "http",
+					"host": [
+						"[::1]"
+					],
+					"port": "5178",
+					"path": [
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fail Signin User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"me.tirtha\",\r\n    \"password\": \"adaveloperthis\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://[::1]:5178/signin",
+					"protocol": "http",
+					"host": [
+						"[::1]"
+					],
+					"port": "5178",
+					"path": [
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authorized getting Protected Resources",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "rAENUaz9pNhNkDr7y7GGE_x1698682341759",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://[::1]:5178/resources",
+					"protocol": "http",
+					"host": [
+						"[::1]"
+					],
+					"port": "5178",
+					"path": [
+						"resources"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unauthorized getting Protected Resources",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "rAENUaz9pNhNkDr7y7GGE_x1698682341759",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://[::1]:5178/resources",
+					"protocol": "http",
+					"host": [
+						"[::1]"
+					],
+					"port": "5178",
+					"path": [
+						"resources"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
